@@ -24,14 +24,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x3060
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    Mystery
+#define MANUFACTURER    FelipeFTN
 #define PRODUCT         Dactyl-Manuform keyboard
 #define DESCRIPTION     An ergonomic split keyboard
 
 /* key matrix size */
 // Rows are doubled-up
-#define MATRIX_ROWS 12
-#define MATRIX_COLS 6
+#define MATRIX_ROWS 10 // Should be 6?
+#define MATRIX_COLS 5
 
 // wiring of each half
 #define MATRIX_ROW_PINS { D4, C6, D7, E6, B4, B5 }
@@ -41,7 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CATERINA_BOOTLOADER
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL // Hopefully, this is correct
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
@@ -62,6 +62,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
+// TODO: I won't use this, but I'll leave it here for now
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
 #define RGBLIGHT_TIMER
